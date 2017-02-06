@@ -22,6 +22,10 @@ git clone the directory to [node_modules/react-native-network-connection-class]
 ```
 
 ### Add it to your react-native project
+#### React Native Link
+`react-native link react-native-network-connection-class`
+#### or manually
+
 * In `android/setting.gradle`
 	```gradle
 	...
@@ -57,6 +61,7 @@ git clone the directory to [node_modules/react-native-network-connection-class]
 ## Example
 
 ```javascript
+...
 import NetworkConnectionClass from 'react-native-network-connection-class'  
 	...
 	//listen to connection class changes
@@ -71,13 +76,17 @@ import NetworkConnectionClass from 'react-native-network-connection-class'
 		console.warn(status)
 	})
 	...
-
 	//start/stop sampling bandwith data on newtork activities
 	NetworkConnectionClass.startSampling()
 	.fetch('https://jsonplaceholder.typicode.com/photos')
 		.then(function(response) {
 			NetworkConnectionClass.stopSampling()
 			...
+	})
+	...
+	// get boolean if sampling thread is running
+	NetworkConnectionClass.getSamplingState().then((isSampling) => {
+		console.warn(isSampling)
 	})
 
 ```

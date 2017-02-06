@@ -58,6 +58,16 @@ public class Module extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void getSamplingState(Promise promise) {
+    try {
+      Boolean samplingState = mDeviceBandwidthSampler.isSampling();
+      promise.resolve(samplingState);
+    } catch (Exception e) {
+      promise.reject(e);
+    }
+  }
+
+  @ReactMethod
   public void getCurrentQuality(Promise promise) {
         try {
           ConnectionQuality cq = mConnectionClassManager.getCurrentBandwidthQuality();
