@@ -1,0 +1,38 @@
+{
+  "name": "react-native-network-connection-class",
+  "version": "0.0.3",
+  "description": "React-Native Android Bridge: Network Connection Class is an Android library that allows you to figure out the quality of the current user's internet connection. The connection gets classified into several 'Connection Classes' that make it easy to develop against.",
+  "author": {
+    "name": "Manuel Koch",
+    "email": "manuel.koch@ymc.ch"
+  },
+  "private": false,
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manuelkch/react-native-network-connection-class"
+  },
+  "keywords": [
+    "JavaScript",
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "android",
+    "network-connection-class",
+    "network-connection",
+    "facebook-connection-class"
+  ],
+  "bugs": {
+    "url": "https://github.com/manuelkch/react-native-network-connection-class/issues"
+  },
+  "homepage": "https://github.com/manuelkch/react-native-network-connection-class",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.38.0"
+  }
+}
